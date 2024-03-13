@@ -1,0 +1,22 @@
+header {
+    position: absolute;
+    top: 0;
+    margin: .5rem;
+}
+
+h1 {
+    margin: 0;
+    font-weight: bolder;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+    color: var(--main-color);
+    box-shadow: 4px 4px 6px var(--main-color);
+    border-radius: 40px;
+    border: .5px solid var(--main-color);
+    font-size: .75rem;
+}

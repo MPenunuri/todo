@@ -1,7 +1,25 @@
+import { Component } from "react";
+import Todolist from "./TodoList.jsx";
 import "./App.css";
 
-function App() {
-  return <h1>Hello world!</h1>;
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <>
+        <header>
+          <h1>Todo list</h1>
+        </header>
+        <main>
+          <Todolist />
+        </main>
+        <footer>Front-end project by MPenunuri.</footer>
+      </>
+    );
+  }
 }
 
 export default App;

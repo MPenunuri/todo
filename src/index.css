@@ -1,0 +1,20 @@
+:root{
+  --main-color: black;
+  --secondary-color: rgb(255, 252, 252);
+  --tertiary-color: rgb(151, 88, 211);
+  background-color: var(--secondary-color);
+}
+
+#root{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
