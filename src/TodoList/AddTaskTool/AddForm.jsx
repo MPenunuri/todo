@@ -10,7 +10,7 @@ class AddForm extends Component {
     return (
       <form
         onSubmit={this.props.handleSubmit}
-        className={this.props.activeAddTaskTool ? "addDisable" : "addActive"}
+        className={this.props.activeAddTaskTool ? "addActive" : "addDisable"}
       >
         <label htmlFor="task-entry">Enter a task:</label>
         <input

@@ -47,7 +47,7 @@ button {
   color: var(--tertiary-color);
 }
 
-*, *:not(form.addActive){
+*, *:not(form.addDisable){
   animation: setVisible 1s ease 0s;
   animation-fill-mode: forwards;
   opacity: 0;

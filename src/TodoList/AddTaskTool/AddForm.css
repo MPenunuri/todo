@@ -11,8 +11,8 @@ form {
     padding: 1rem;
 }
 
-.addActive {
-    animation: setInvisible 1s ease 0s;
+.addDisable {
+    animation: setInvisible .5s ease 0s;
     animation-fill-mode: forwards;
     opacity: 1;
 }
@@ -31,7 +31,7 @@ form {
     }
 }
 
-form:focus, form:hover, form:not(label):hover, form:not(label):focus{
+form:focus, form:hover, form:not(label):hover {
     cursor: pointer;
     transform: translate(-4px, -4px);
     box-shadow: 2px 2px 2px var(--main-color);

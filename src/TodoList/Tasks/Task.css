@@ -1,0 +1,26 @@
+.editActive, .editDisable {
+    flex-direction: row;
+}
+
+.editDisable {
+    flex-direction: row;
+}
+
+.editDisable, 
+.editDisable > button, 
+.editDisable> input {
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    transition: all 1s ease;
+}
+
+form.editDisable:focus,
+form.editDisable:hover,
+form.editDisable > input:hover,
+form.editDisable > input:focus {
+    cursor: initial;
+    transform: initial;
+    box-shadow: none;
+    transition: all 1 ease;
+    filter: none;
+}
