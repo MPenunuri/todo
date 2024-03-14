@@ -1,0 +1,54 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    width: 80vw;
+    max-width: 600px;
+    border-radius: 40px;
+    border: 2px solid var(--tertiary-color);
+    padding: 1rem;
+}
+
+.addActive {
+    animation: setInvisible 1s ease 0s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes setInvisible {
+    0% {
+        opacity: 1;
+    }
+
+    99.9% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+form:focus, form:hover, form:not(label):hover, form:not(label):focus{
+    cursor: pointer;
+    transform: translate(-4px, -4px);
+    box-shadow: 2px 2px 2px var(--main-color);
+    transition: all .5s ease 0s;
+    filter: drop-shadow(4px 2px 4px var(--tertiary-color));
+}
+
+form > input {
+    min-height: 2rem;
+}
+
+label {
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+button {
+    border-radius: 40px;
+    padding: .5rem 1rem;
+}

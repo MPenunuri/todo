@@ -1,5 +1,6 @@
 import { Component } from "react";
 import AddForm from "./AddTaskTool/AddForm.jsx";
+import "./AddTaskTool/AddTaskTool.css";
 
 class AddTaskTool extends Component {
   constructor(props) {
@@ -24,12 +25,16 @@ class AddTaskTool extends Component {
         <button
           type="button"
           aria-label="Show add task form"
-          className={this.state.activeAddTaskTool ? "addActive" : "addDisable"}
+          className={
+            this.state.activeAddTaskTool ? "addDisableBtn" : "addActiveBtn"
+          }
+          onClick={this.handleActiveBtn}
         >
-          {this.state.activeAddTaskTool ? "+" : "-"}
+          {this.state.activeAddTaskTool ? "-" : "+"}
         </button>
         <AddForm
-          activeAddTaskTool={this.activeAddTaskTool}
+          activeAddTaskTool={this.state.activeAddTaskTool}
+          inputVal={this.props.inputVal}
           handleInputChange={this.props.handleInputChange}
           handleSubmit={this.props.handleSubmit}
         />

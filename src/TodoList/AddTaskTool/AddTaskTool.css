@@ -1,0 +1,27 @@
+.addActiveBtn, .addDisableBtn {
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    height: .5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    border-color: var(--main-color);
+}
+
+.addActiveBtn {
+    background-color: green;
+}
+
+.addActiveBtn:hover, .addActiveBtn:focus {
+    filter: drop-shadow(4px 2px 4px green);
+}
+
+.addDisableBtn {
+    background-color: brown;
+}
+
+.addDisableBtn:hover, .addDisableBtn:focus {
+    filter: drop-shadow(4px 2px 4px brown);
+}

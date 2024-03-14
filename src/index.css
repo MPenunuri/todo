@@ -18,3 +18,47 @@
   justify-content: center;
   align-items: center;
 }
+
+button, input {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  border-style: none;
+  border-radius: 20px;
+  border: 2px solid var(--tertiary-color);
+}
+
+button:hover, button:focus, input:hover, input:focus {
+  cursor: pointer;
+  transform: translate(-4px, -4px);
+  box-shadow: 2px 2px 2px var(--main-color); 
+  transition: all .5s ease 0s;
+  filter: drop-shadow(4px 2px 4px var(--tertiary-color));
+}
+
+input{
+  text-align: center;
+  width: 80vw;
+  max-width: 600px;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--tertiary-color);
+}
+
+*, *:not(form.addActive){
+  animation: setVisible 1s ease 0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+  
+@keyframes setVisible {
+  from {
+    opacity: 0;
+    }
+
+  to {
+    opacity: 1;
+  }
+}

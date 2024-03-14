@@ -25,7 +25,7 @@ class TodoList extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState((state) => ({
-      todos: state.todos.concat(state.inputVal),
+      tasks: state.tasks.concat(state.inputVal),
       inputVal: "",
     }));
   }
@@ -34,11 +34,12 @@ class TodoList extends Component {
     return (
       <>
         <AddTaskTool
+          inputVal={this.state.inputVal}
           handleInputChange={this.handleInputChange}
           handleSubmit={this.handleSubmit}
         />
         <h2>Your tasks:</h2>
-        <Tasks />
+        <Tasks tasks={this.state.tasks} />
       </>
     );
   }

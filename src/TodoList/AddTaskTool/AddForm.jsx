@@ -1,4 +1,5 @@
 import { Component } from "react";
+import "./AddForm.css";
 
 class AddForm extends Component {
   constructor(props) {
@@ -7,8 +8,21 @@ class AddForm extends Component {
 
   render() {
     return (
-      <form action="">
-        <button type="submit"></button>
+      <form
+        onSubmit={this.props.handleSubmit}
+        className={this.props.activeAddTaskTool ? "addDisable" : "addActive"}
+      >
+        <label htmlFor="task-entry">Enter a task:</label>
+        <input
+          type="text"
+          name="task-entry"
+          id="task-entry"
+          value={this.props.inputVal}
+          onChange={this.props.handleInputChange}
+          placeholder="Example: Do the laundry..."
+          required
+        />
+        <button type="submit">Submit</button>
       </form>
     );
   }
