@@ -17,7 +17,6 @@ class Tasks extends Component {
               <Task
                 key={task.id}
                 task={task}
-                remove={this.props.remove}
                 removeTask={this.props.removeTask}
                 edit={this.props.edit}
                 editTask={this.props.editTask}

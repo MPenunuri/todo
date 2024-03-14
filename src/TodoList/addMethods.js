@@ -13,7 +13,8 @@ export function handleSubmit(e) {
     tasks: state.tasks.concat({
       id: uuidv4(),
       task: state.inputVal,
-      created_at: new Date(),
+      onEdition: false,
+      createdAt: new Date(),
     }),
     inputVal: "",
   }));

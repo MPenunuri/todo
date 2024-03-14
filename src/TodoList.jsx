@@ -18,7 +18,6 @@ class TodoList extends Component {
       inputVal: "",
       edit: false,
       editVal: "",
-      remove: false,
     };
 
     this.handleInputChange = handleInputChange.bind(this);
@@ -39,7 +38,6 @@ class TodoList extends Component {
         />
         <Tasks
           tasks={this.state.tasks}
-          remove={this.state.remove}
           removeTask={this.removeTask}
           edit={this.state.edit}
           editTask={this.editTask}

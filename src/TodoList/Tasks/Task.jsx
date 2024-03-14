@@ -12,7 +12,7 @@ class Task extends Component {
         onSubmit={(e) => {
           this.props.handleEdit(e, this.props.task);
         }}
-        className={this.props.edit ? "editActive" : "editDisable"}
+        className={this.props.task.onEdition ? "editActive" : "editDisable"}
       >
         <label htmlFor="task">Task:</label>
         <input
@@ -21,16 +21,36 @@ class Task extends Component {
           id="task"
           defaultValue={this.props.task.task}
           onChange={() => {}}
-          readOnly={!this.props.edit}
+          readOnly={!this.props.task.onEdition}
           placeholder="Error: No empty tasks allowed"
           required
         />
-        <button
-          type={this.props.edit ? "submit" : "button"}
-          onClick={this.props.edit ? () => {} : this.props.editTask}
-        >
-          {this.props.edit ? "Save" : "Edit"}
-        </button>
+        {this.props.edit && !this.props.task.onEdition ? (
+          <></>
+        ) : (
+          <>
+            <button
+              type={this.props.task.onEdition ? "submit" : "button"}
+              onClick={
+                this.props.edit
+                  ? () => {}
+                  : (e) => {
+                      this.props.editTask(e, this.props.task);
+                    }
+              }
+            >
+              {this.props.task.onEdition ? "Save" : "Edit"}
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                this.props.removeTask(e, this.props.task);
+              }}
+            >
+              Delete
+            </button>
+          </>
+        )}
       </form>
     );
   }
