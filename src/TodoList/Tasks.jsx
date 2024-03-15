@@ -3,10 +3,6 @@ import Task from "./Tasks/Task.jsx";
 import "./Tasks/Tasks.css";
 
 class Tasks extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return this.props.tasks.length > 0 ? (
       <>
